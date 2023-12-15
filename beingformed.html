@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "style.css" rel = "stylesheet">
+
+</head>
+<body>
+    <img src = "background.jpg" style = "position:absolute; left: 0;  height: 110vh; width: 100vw; ">
+
+    <a class = "logo" style="position:relative; z-index: 3; justify-self: center; align-self: center; grid-column: 3; grid-row: 3;" href = "./home.html"> <img class="logo"  src = "entry_level_white.svg"></a>
+</body>
+</html>
+
+<script>
+   window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href;
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('body').style.opacity = 1
+})
+</script>

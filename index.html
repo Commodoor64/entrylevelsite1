@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "style.css" rel = "stylesheet">
+</head>
+<body style = "background-color: black;  height: 100vh;">
+    <div onclick = "transitionToPage('./home.html')"class = "homelogo" style="justify-self: center; align-self: center; grid-column: 3; grid-row: 3; transform:scale(1.3);" href = "./home.html"> <img class="logo"  src="entrelevelnew.png"></div>
+    
+</body>
+</html>
+
+<script>
+    window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('body').style.opacity = 1
+})
+</script>
